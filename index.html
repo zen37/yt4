@@ -54,14 +54,15 @@ var val = val1 + '-' + val2;
                 ' return false">'+
                 '<img  width="80" height="60" src="http://img.youtube.com/vi/'+ 
                 vid +'/default.jpg"></a></td>'+
-                '<td style="vertical-align:top"><b>'+(i+1)+'</b>-'+ tit +'</td></tr>';
+                '<td style="vertical-align:top"><b>'+(i+1)+'</b>-'+ vid + tit +'</td></tr>';
           }
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
   }
   
   function playVid(thi){
-      var st = 'https://www.youtube.com/embed/'+thi.title+'?autoplay=1';
+      //var st = 'https://www.youtube.com/embed/'+thi.title+'?autoplay=1';
+      var st = 'https://www.youtube.com/embed/'+thi.vid+'?autoplay=1';
       document.getElementById('player').src = st; 
   }
   </script>
