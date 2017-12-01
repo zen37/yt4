@@ -46,15 +46,19 @@ var val = val1 + '-' + val2;
   function myPlan(response){
       var stList = '<table id="res1" border="1" cellspacing="1" width="100%"><tbody>'; 
       for (var i=0; i<response.items.length;i++){
+        
           var vid = response.items[i].id.videoId; 
           var tit = response.items[i].snippet.title;
+          var videodatetime = videos[i].snippet.publishedAt; // date time published
+          var videodate = videodatetime.substr(0, 10);
+        
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:80px;">'+
                 '<a class="show" href="#" title="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+
                 '<img  width="80" height="60" src="http://img.youtube.com/vi/'+ 
                 vid +'/default.jpg"></a></td>'+
-                '<td style="vertical-align:top"><b>'+(i+1)+'</b>-'+ vid + tit +'</td></tr>';
+                '<td style="vertical-align:top"><b>'+(i+1)+'</b>-'+ vid + ' ' + videodate +'</td></tr>';
           }
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
