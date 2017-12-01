@@ -12,7 +12,7 @@
   <br>
   <br>
   <input type="text"  value="" id="queryText" size="80">&nbsp;
-  <button type="button" onclick="searchQ()">Search 11 videos</button>
+  <button type="button" onclick="searchQ()">Search 8 videos</button>
   <br>
   <div id='list1' style="width:750px;height:250px;overflow:auto;
   text-align:left;background-color:#eee;line-height:150%;padding:10px">
@@ -21,7 +21,7 @@
   </div>
  
  <script>
- var maxRes = 11; 
+ var maxRes = 8; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -30,7 +30,7 @@ var val = val1 + '-' + val2;
  function searchQ(){
       query = document.getElementById('queryText').value;
       email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
-      '&order=viewCount&q='+ query + '&key=' + val +
+      '&order=date&q='+ query + '&key=' + val +
       '&callback=myPlan';
       var oldsearchS = document.getElementById('searchS');
       if(oldsearchS){
