@@ -36,7 +36,7 @@ body {
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-   <h2>No Score 3</h2>
+   <h2>No Score 4</h2>
   <div class="row">
   <div class="column left" style="background-color:#eee;">
   <input type="text"  value="" id="queryText" size="80">&nbsp;
@@ -85,7 +85,7 @@ var val = val1 + '-' + val2;
           var videodate = videodatetime.substr(0, 10);
         
           if(typeof vid != 'undefined'){    
-              stList += '<tr><td style="width:80px;">'+
+              stList += '<tr><td style="column left">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+
                 '<img  width="80" height="60" src="http://img.youtube.com/vi/'+ 
