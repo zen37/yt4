@@ -10,15 +10,16 @@ body {
 .column {
     float: left;
     padding: 10px;
-    background-color: #eee;
 }
 
 .left {
   width: 35%;
+  background-color: #eee;
 }
 
 .right {
   width: 65%;
+  background-color: #bbb;
 }
 
 /* Clear floats after the columns */
