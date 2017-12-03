@@ -36,7 +36,7 @@ body {
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-   <h2>No Score 7</h2>
+   <h2>No Score 8</h2>
   <div class="row">
   <div class="column left" style="background-color:#eee;">
   <input type="text"  value="" id="queryText" size="80">&nbsp;
@@ -75,7 +75,7 @@ var val = val1 + '-' + val2;
   }
     
   function myPlan(response){
-      var stList = '<table id="res1" border="1" cellspacing="1" width="100%"><tbody>'; 
+      var stList = '<table id="res1" border="0" cellspacing="1" width="100%"><tbody>'; 
       for (var i=0; i<response.items.length;i++){
         
           var vid = response.items[i].id.videoId; 
@@ -85,12 +85,12 @@ var val = val1 + '-' + val2;
           var videodate = videodatetime.substr(0, 10);
         
           if(typeof vid != 'undefined'){    
-              stList += '<tr width ="100%"><td style="column left">'+
+              stList += '<tr><td>'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+
                 '<img  width="80" height="60" src="http://img.youtube.com/vi/'+ 
                 vid +'/default.jpg"></a></td>'+
-                '<td style="column right">'+'Published:' + videodate + ' ' + lang + '</td></tr>';
+                '<td>'+'Published:' + videodate + ' ' + lang + '</td></tr>';
           }
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
