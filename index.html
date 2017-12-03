@@ -49,8 +49,12 @@ var val = val1 + '-' + val2;
       for (var i=0; i<response.items.length;i++){
         
           var vid = response.items[i].id.videoId; 
-         // var lang = response.items[i].snippet.defaultLanguage;
+         
+          var lang = response.items[i].snippet.defaultLanguage;
          // var viewCount = response.items[i].statistics.viewCount;
+        
+         var channelTitle  =  response.items[i].snippet.channelTitle;
+        
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
         
