@@ -6,10 +6,10 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-   <h2>No Score 12</h2>
+  <h2>No Score 13</h2>
   <div class="row">
   <div class="column left" style="background-color:#eee;">
-  <input type="text"  value="" id="queryText" size="80">&nbsp;
+  <input type="text" value="" id="queryText" size="80">&nbsp;
   <button type="button" onclick="searchQ()">Search</button>
   <br>
   <div id="list1">
@@ -58,7 +58,7 @@ var val = val1 + '-' + val2;
               stList += '<tr><td>'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+
-                '<img  width="80" height="60" src="http://img.youtube.com/vi/'+ 
+                '<img src="http://img.youtube.com/vi/'+ 
                 vid +'/default.jpg"></a></td>'+
                 '<td>'+ videodate + ' ' + lang + '</td></tr>';
           }
