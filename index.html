@@ -2,6 +2,38 @@
 <html>
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+
+}
+
+.left {
+  width: 35%;
+}
+
+.right {
+  width: 65%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>  
+    
   </head>
   
   <body onload="document.getElementById('player').src = ''">
@@ -12,7 +44,7 @@
   <br>
   <br>
   <input type="text"  value="" id="queryText" size="80">&nbsp;
-  <button type="button" onclick="searchQ()">Search 5 videos</button>
+  <button type="button" onclick="searchQ()">Search 7 videos</button>
   <br>
   <div id='list1' style="width:750px;height:250px;overflow:auto;
   text-align:left;background-color:#eee;line-height:150%;padding:10px">
