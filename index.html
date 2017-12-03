@@ -6,7 +6,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 16</h2>
+  <h2>No Score 17</h2>
   <div class="row">
   <div class="column left">
   <input type="text" value="" id="queryText" size="80">
@@ -49,8 +49,8 @@ var val = val1 + '-' + val2;
       for (var i=0; i<response.items.length;i++){
         
           var vid = response.items[i].id.videoId; 
-        //  var tit = response.items[i].snippet.title;
-          var lang = response.items[i].snippet.language;
+          var lang = response.items[i].snippet.defaultLanguage;
+          var viewCount = response.items[i].statistics.viewCount;
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
         
@@ -60,7 +60,7 @@ var val = val1 + '-' + val2;
                 ' return false">'+
                 '<img src="http://img.youtube.com/vi/'+ 
                 vid +'/default.jpg"></a></td>'+
-                '<td>'+ videodate + ' ' + lang + '</td></tr>';
+                '<td>'+ videodate + ' ' + lang + ' ' + viewCount +'</td></tr>';
           }
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
