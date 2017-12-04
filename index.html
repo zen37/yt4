@@ -7,7 +7,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 33</h2>
+  <h2>No Score 34</h2>
   <div class="row">
   <div class="column left">
   <input type="text" value="woody allen act of creation" id="queryText" size="80">
@@ -28,6 +28,10 @@
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
+   
+    $.get({
+            alert("jQuery")
+    });
    
  function searchQ(){
       query = document.getElementById('queryText').value;
@@ -59,10 +63,7 @@ var val = val1 + '-' + val2;
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
      
-          $.get({
-            alert("jQuery");
-          });
-          /*     
+         /*
                     "https://www.googleapis.com/youtube/v3/videos",
                     {
                         part: 'contentDetails',
