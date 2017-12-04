@@ -7,7 +7,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 30</h2>
+  <h2>No Score 31</h2>
   <div class="row">
   <div class="column left">
   <input type="text" value="" id="queryText" size="80">
@@ -51,7 +51,7 @@ var val = val1 + '-' + val2;
         
           var vid = response.items[i].id.videoId; 
          
-          var lang = response.items[i].snippet.defaultAudioLanguage;
+          var lang = response.items[i].snippet.defaultLanguage;
          // var viewCount = response.items[i].statistics.viewCount;
         
           var channelTitle  =  response.items[i].snippet.channelTitle;
