@@ -6,7 +6,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 24</h2>
+  <h2>No Score 25</h2>
   <div class="row">
   <div class="column left">
   <input type="text" value="" id="queryText" size="80">
@@ -60,7 +60,7 @@ var val = val1 + '-' + val2;
       
        
        contentDetails = 'https://www.googleapis.com/youtube/v3/videos?id=' & vid +'&part=contentDetails&key=' + val;
-       var duration = contentDetails.duration;       
+       var duration = response.items[i].contentDetails.duration;       
        
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
