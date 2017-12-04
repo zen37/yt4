@@ -7,7 +7,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 34</h2>
+  <h2>No Score 35</h2>
   <div class="row">
   <div class="column left">
   <input type="text" value="woody allen act of creation" id="queryText" size="80">
@@ -28,10 +28,17 @@
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
-   
-    $.get({
-            alert("jQuery")
+ 
+   /*
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("demo_test.asp", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
     });
+});
+   
+   */
    
  function searchQ(){
       query = document.getElementById('queryText').value;
