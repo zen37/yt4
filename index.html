@@ -7,7 +7,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 27</h2>
+  <h2>No Score 28</h2>
   <div class="row">
   <div class="column left">
   <input type="text" value="" id="queryText" size="80">
@@ -62,7 +62,7 @@ var val = val1 + '-' + val2;
            $.get(
                     "https://www.googleapis.com/youtube/v3/videos",
                     {
-                        part: 'contentDetails, statistics',
+                        part: 'contentDetails',
                         id: vid, //item.snippet.resourceId.videoId,
                         key: val,
                     },
@@ -70,7 +70,7 @@ var val = val1 + '-' + val2;
                     function(videoItem) 
                     {
                         duration = videoItem.contentDetails.duration; // pass item's duration
-                        viewCount = videoItem.statistics.viewCount; // pass item's view count
+                        //viewCount = videoItem.statistics.viewCount; // pass item's view count
                     }
                 );
        
