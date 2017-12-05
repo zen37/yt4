@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 47</h2>
+  <h2>No Score 48</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -72,7 +72,7 @@ var val = val1 + '-' + val2;
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
         
-          var img_url = response.items[i].snippet.thumbnails.high.url;
+          var img_url = response.items[i].snippet.thumbnails.default.url;
         
           console.log(img_url);
      
@@ -97,7 +97,7 @@ var val = val1 + '-' + val2;
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+
-                '<img src=+ img_url +></a></td>'+
+                '<img src='+ img_url +'></a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' Channel: ' + channelTitle + ' Lang:' + lang +'</td></tr>';
           }
       }
