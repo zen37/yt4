@@ -17,7 +17,7 @@
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
-  <input type="text" value="woody allen act of creation" id="queryText" size="80">
+  <input type="text" value="manchester city vs southampton 2017" id="queryText" size="80">
   <button type="button" onclick="searchQ()">Search</button>
   <input type="button" id="btn1" class="btn-click-action" value="jQuery"/>
   <br>
@@ -71,6 +71,8 @@ var val = val1 + '-' + val2;
         
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
+        
+          var img = response.items[i].snippet.thumbnails.default;
      
          /*
                     "https://www.googleapis.com/youtube/v3/videos",
