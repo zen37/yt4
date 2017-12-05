@@ -72,7 +72,7 @@ var val = val1 + '-' + val2;
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
         
-          var img_url = response.items[i].snippet.thumbnails.medium.url;
+          var img_url = response.items[i].snippet.thumbnails.high.url;
         
           console.log(img_url);
      
