@@ -31,7 +31,7 @@
 </div>
  
  <script>
- var maxRes = 11; 
+ var maxRes = 3; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -73,6 +73,8 @@ var val = val1 + '-' + val2;
           var videodate = videodatetime.substr(0, 10);
         
           var img_url = response.items[i].snippet.thumbnails.default.url;
+        
+          alert(img_url);
      
          /*
                     "https://www.googleapis.com/youtube/v3/videos",
