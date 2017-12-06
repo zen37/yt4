@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 51</h2>
+  <h2>No Score 52</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -87,10 +87,7 @@ var val = val1 + '-' + val2;
                     }
                 );
        */
-            $(function() {
-                 $( "p" ).text( "The DOM is now loaded and can be manipulated." );
-           });
- 
+
         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
@@ -98,6 +95,10 @@ var val = val1 + '-' + val2;
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + lang +'</td></tr>';
           }
+        
+            $(function() {
+                 $( "p" ).text( "The DOM is now loaded and can be manipulated." );
+           });
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
   }
