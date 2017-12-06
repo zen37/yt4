@@ -7,7 +7,7 @@
     
       <style>
   p {
-    color: red;
+    color: green;
   }
   </style>
   </head>
@@ -88,8 +88,7 @@ var val = val1 + '-' + val2;
                       var viewCount = video_details.statistics.viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
-                    }
-                );
+
    
         
           if(typeof vid != 'undefined'){    
@@ -97,9 +96,12 @@ var val = val1 + '-' + val2;
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
-                ' / Views: ' + $( "p" ).text +
+                ' / Views: ' + viewCount +
                 '</td></tr>';
           }
+           
+                      } // was after  console.log(video_details);
+                );
         
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
