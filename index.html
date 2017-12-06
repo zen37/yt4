@@ -74,7 +74,7 @@ var val = val1 + '-' + val2;
         
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
-                        part: ('contentDetails', 'statistics'),
+                        part: ('contentDetails', 'statistics', 'snippet'),
                         id: vid, 
                         key: val
                     },
