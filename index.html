@@ -19,7 +19,6 @@
   <div class="column left">
   <input type="text" value="manchester city vs southampton 2017" id="queryText" size="80">
   <button type="button" onclick="searchQ()">Search</button>
-  <input type="button" id="btn1" class="btn-click-action" value="jQuery"/>
   <br>
   <div id="list1">
   </div>
@@ -87,28 +86,20 @@ var val = val1 + '-' + val2;
                        var video_details = data.items[0];
                       //  var duration = data.contentDetails.duration; 
                       var viewCount = video_details.statistics.viewCount;
+                      $( "p" ).text(viewCount );
                       console.log(video_details);
                     }
                 );
-     
-       
-       //   var img_url = response.items[i].snippet.thumbnails.default.url;
-        
-       
+   
         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
-                ' / Views: ' + viewCount +
+                ' / Views: ' + $( "p" ).text +
                 '</td></tr>';
           }
-
-     
-          $("#btn1").click(function(){
-            alert("Value ");
-          });
         
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
