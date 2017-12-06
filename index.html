@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 59</h2>
+  <h2>No Score 60</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -74,7 +74,7 @@ var val = val1 + '-' + val2;
         
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
-                        part: 'contentDetails',
+                        part: 'contentDetails', snippet,
                         id: vid, 
                         key: val
                     },
