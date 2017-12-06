@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 52</h2>
+  <h2>No Score 53</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -99,6 +99,11 @@ var val = val1 + '-' + val2;
             $(function() {
                  $( "p" ).text( "The DOM is now loaded and can be manipulated." );
            });
+        
+        
+        $("#btn1").click(function(){
+          alert("Value: ");
+        });
       }
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
   }
