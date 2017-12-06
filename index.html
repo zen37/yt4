@@ -82,7 +82,7 @@ var val = val1 + '-' + val2;
 
                     function(videoItem) 
                     {
-                        duration = videoItem.contentDetails.duration; // pass item's duration
+                        var duration = videoItem.contentDetails.duration; 
                         //viewCount = videoItem.statistics.viewCount; // pass item's view count
                     }
                 );
@@ -90,29 +90,13 @@ var val = val1 + '-' + val2;
        //   var img_url = response.items[i].snippet.thumbnails.default.url;
         
          // console.log(img_url);
-     
-         /*
-                    "https://www.googleapis.com/youtube/v3/videos",
-                    {
-                        part: 'contentDetails',
-                        id: vid, //item.snippet.resourceId.videoId,
-                        key: val,
-                    },
-
-                    function(videoItem) 
-                    {
-                        duration = videoItem.contentDetails.duration; // pass item's duration
-                        //viewCount = videoItem.statistics.viewCount; // pass item's view count
-                    }
-                );
-       */
-
         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
-                '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + lang +'</td></tr>';
+                '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + lang + 
+                ' / Duration: ' + duration +'</td></tr>';
           }
 
      
