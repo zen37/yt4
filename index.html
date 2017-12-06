@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 53</h2>
+  <h2>No Score 54</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -68,6 +68,11 @@ var val = val1 + '-' + val2;
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
         
+                
+            $(function() {
+                 $( "p" ).text( "The DOM is now loaded and can be manipulated." );
+           });
+        
        //   var img_url = response.items[i].snippet.thumbnails.default.url;
         
          // console.log(img_url);
@@ -95,12 +100,9 @@ var val = val1 + '-' + val2;
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + lang +'</td></tr>';
           }
-        
-            $(function() {
-                 $( "p" ).text( "The DOM is now loaded and can be manipulated." );
-           });
+
      
-          $("#show").click(function(){
+          $("#btn1").click(function(){
             alert("Value ");
           });
         
