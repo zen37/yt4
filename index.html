@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 64</h2>
+  <h2>No Score 65</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -60,7 +60,7 @@ var val = val1 + '-' + val2;
         
           var vid = response.items[i].id.videoId; 
          
-          var lang = response.items[i].snippet.defaultLanguage;
+          var lang = response.items[i].snippet.defaultAudioLanguage;
          // var viewCount = response.items[i].statistics.viewCount;
         
           var channelTitle  =  response.items[i].snippet.channelTitle;
