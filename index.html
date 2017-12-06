@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 68</h2>
+  <h2>No Score 69</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -59,15 +59,17 @@ var val = val1 + '-' + val2;
       for (var i=0; i<response.items.length;i++){
         
           var vid = response.items[i].id.videoId; 
-         
-          var videolang = response.items[i].snippet.defaultAudioLanguage;
-          console.log('Language: ' + videolang);
+       
+ 
          // var viewCount = response.items[i].statistics.viewCount;
         
           var channelTitle  =  response.items[i].snippet.channelTitle;
         
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
           var videodate = videodatetime.substr(0, 10);
+        
+          var videolang = response.items[i].snippet.defaultAudioLanguage;
+          console.log('Language: ' + videolang + 'channelTitle: ' + channelTitle);
                 
             $(function() {
                  $( "p" ).text( "The DOM is now loaded and can be manipulated." );
