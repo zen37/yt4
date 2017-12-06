@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 50</h2>
+  <h2>No Score 51</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -38,11 +38,7 @@ var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
   
  function searchQ(){
-   
-    $(function() {
-    $( "p" ).text( "The DOM is now loaded and can be manipulated." );
-  });
-   
+ 
       query = document.getElementById('queryText').value;
       email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
       '&order=date&viewCount&q='+ query + '&key=' + val +
@@ -91,6 +87,9 @@ var val = val1 + '-' + val2;
                     }
                 );
        */
+            $(function() {
+                 $( "p" ).text( "The DOM is now loaded and can be manipulated." );
+           });
  
         
           if(typeof vid != 'undefined'){    
