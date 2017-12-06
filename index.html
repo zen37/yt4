@@ -13,7 +13,7 @@
   </head>
   
   <body onload="document.getElementById('player').src = ''">    
-  <h2>No Score 56</h2>
+  <h2>No Score 57</h2>
   <p>Not loaded yet.</p>
   <div class="row">
   <div class="column left">
@@ -72,20 +72,20 @@ var val = val1 + '-' + val2;
                  $( "p" ).text( "The DOM is now loaded and can be manipulated." );
            });
         
-         $.get( 
-                  "https://www.googleapis.com/youtube/v3/videos",
+         $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
                         part: 'contentDetails',
                         id: vid, //item.snippet.resourceId.videoId,
-                        key: val,
+                        key: val
                     },
 
-                    function(videoItem) 
+                    function(data) 
                     {
-                        var duration = videoItem.contentDetails.duration; 
+                        var duration = data.contentDetails.duration; 
                         //viewCount = videoItem.statistics.viewCount; // pass item's view count
                     }
                 );
+     
         
        //   var img_url = response.items[i].snippet.thumbnails.default.url;
         
