@@ -41,7 +41,7 @@ var val = val1 + '-' + val2;
  
       query = document.getElementById('queryText').value;
       email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
-      '&order=date&viewCount&q='+ query + '&key=' + val +
+      '&order=viewCount&date&q='+ query + '&key=' + val +
       '&callback=myPlan';
       var oldsearchS = document.getElementById('searchS');
       if(oldsearchS){
@@ -61,7 +61,7 @@ var val = val1 + '-' + val2;
           var vid = response.items[i].id.videoId; 
        
  
-         // var viewCount = response.items[i].statistics.viewCount;
+         
         
           var channelTitle  =  response.items[i].snippet.channelTitle;
         
@@ -77,7 +77,7 @@ var val = val1 + '-' + val2;
         
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
-                        part: ('contentDetails', 'statistics'),
+                        part: 'contentDetails''statistics',
                         id: vid, 
                         key: val
                     },
@@ -86,6 +86,7 @@ var val = val1 + '-' + val2;
                     {
                        var video_details = data.items[0];
                       //  var duration = data.contentDetails.duration; 
+                      var viewCount = video_details.statistics.viewCount;
                       console.log(video_details);
                     }
                 );
@@ -99,7 +100,9 @@ var val = val1 + '-' + val2;
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
-                '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +'</td></tr>';
+                '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
+                ' / Views: ' + viewCount +
+                '</td></tr>';
           }
 
      
