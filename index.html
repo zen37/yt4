@@ -36,13 +36,13 @@
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
+  
+ function searchQ(){
    
-     $(function() {
+    $(function() {
     $( "p" ).text( "The DOM is now loaded and can be manipulated." );
   });
- 
    
- function searchQ(){
       query = document.getElementById('queryText').value;
       email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
       '&order=date&viewCount&q='+ query + '&key=' + val +
