@@ -8,13 +8,12 @@ var video_details = {
       
    get viewCount() {
           return this.viewCount;  
-      }
+      },
       
    set viewCount(value) {
             this.viewCount = value;
       }
-   
-}
+};
   
  function searchQ(){
  
