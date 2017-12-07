@@ -1,4 +1,4 @@
-var maxRes = 20; 
+var maxRes = 5; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -34,11 +34,7 @@ var val = val1 + '-' + val2;
         
           var videolang = response.items[i].snippet.defaultAudioLanguage;
         //  console.log('Language: ' + videolang + 'channelTitle: ' + channelTitle);
-                
-            $(function() {
-                 $( "p" ).text( "The DOM is now loaded and can be manipulated." );
-           });
-        
+                      
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
                         part: ('contentDetails','statistics'),
@@ -53,6 +49,8 @@ var val = val1 + '-' + val2;
                       var viewCount = video_details.statistics.viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
+                     } 
+                  );
         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
@@ -62,13 +60,10 @@ var val = val1 + '-' + val2;
                 ' / Views: ' + 'viewCount' +
                 '</td></tr>';
                }
-             } 
-          );
    
       }               
 
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
-
   }
   
   function playVid(thi){
