@@ -1,5 +1,5 @@
 <script>
- alert('i am here in scripts.js);
+ alert('i am here in scripts.js');
  var maxRes = 20; 
    
 var val1 = 'AIzaSyAFV5dB';
