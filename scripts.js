@@ -49,7 +49,7 @@ var val = val1 + '-' + val2;
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
-                    //  var viewCount = video_details.statistics.viewCount;
+                       var viewCount = video_details.statistics.viewCount;
                     //  return viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
