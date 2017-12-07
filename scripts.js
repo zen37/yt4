@@ -53,8 +53,6 @@ var val = val1 + '-' + val2;
                       var viewCount = video_details.statistics.viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
-                     } 
-                );
         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
@@ -63,8 +61,10 @@ var val = val1 + '-' + val2;
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
                 ' / Views: ' + 'viewCount' +
                 '</td></tr>';
-          }
-     
+               }
+             } 
+          );
+   
       }               
 
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
