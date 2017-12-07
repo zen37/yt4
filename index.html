@@ -7,7 +7,7 @@
     
       <style>
   p {
-    color: green;
+    color: red;
   }
   </style>
   </head>
@@ -58,10 +58,7 @@ var val = val1 + '-' + val2;
       for (var i=0; i<response.items.length;i++){
         
           var vid = response.items[i].id.videoId; 
-       
- 
-         
-        
+      
           var channelTitle  =  response.items[i].snippet.channelTitle;
         
           var videodatetime = response.items[i].snippet.publishedAt; // date time published
@@ -96,14 +93,13 @@ var val = val1 + '-' + val2;
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
-                ' / Views: ' + viewCount +
+                ' / Views: ' + 'viewCount' +
                 '</td></tr>';
           }
      
       }               
 
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
-        
 
   }
   
