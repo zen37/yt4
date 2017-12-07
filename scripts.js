@@ -1,4 +1,4 @@
-var maxRes = 7; 
+var maxRes = 8; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -35,7 +35,7 @@ var val = val1 + '-' + val2;
           var videolang = response.items[i].snippet.defaultAudioLanguage;
         //  console.log('Language: ' + videolang + 'channelTitle: ' + channelTitle);
          
-         var video_details;
+            var video_details;
                       
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
@@ -53,10 +53,13 @@ var val = val1 + '-' + val2;
                     //  return viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
+                     
+                     return video_details;
+            
                      } 
+  
                   );
   
-        
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
