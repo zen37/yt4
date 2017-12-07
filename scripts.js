@@ -1,4 +1,4 @@
-var maxRes = 5; 
+var maxRes = 8; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -37,9 +37,9 @@ var val = val1 + '-' + val2;
                       
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
-                        part: ('contentDetails','statistics'),
-                        id: vid, 
-                        key: val
+                        part: 'contentDetails, statistics',
+                        id:   vid, 
+                        key:  val
                     },
 
                     function(data) 
