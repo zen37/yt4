@@ -1,5 +1,4 @@
- alert('i am here in scripts.js');
- var maxRes = 20; 
+var maxRes = 20; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
