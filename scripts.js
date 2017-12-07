@@ -7,11 +7,13 @@ var val = val1 + '-' + val2;
 var video_details = {
    count: 0,  
    get viewCount() {
+          console.log('count: '+ count);
           return this.count;  
       },
       
    set viewCount(value) {
             this.count = value;
+            console.log('value: '+ value);
       }
 };
   
