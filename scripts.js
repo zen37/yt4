@@ -3,6 +3,18 @@ var maxRes = 8;
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
+
+var video_details = {
+      
+   get viewCount() {
+          return this.viewCount;  
+      }
+      
+   set viewCount(value) {
+            this.viewCount = value;
+      }
+   
+}
   
  function searchQ(){
  
@@ -34,8 +46,7 @@ var val = val1 + '-' + val2;
         
           var videolang = response.items[i].snippet.defaultAudioLanguage;
         //  console.log('Language: ' + videolang + 'channelTitle: ' + channelTitle);
-         
-         var video_details;
+     
                       
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
@@ -49,7 +60,8 @@ var val = val1 + '-' + val2;
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
-                       var viewCount = video_details.statistics.viewCount;
+                        video_details.viewCount = video_details.statistics.viewCount;
+            
                     //  return viewCount;
                       $( "p" ).text(viewCount);
                       console.log(video_details);
@@ -60,7 +72,7 @@ var val = val1 + '-' + val2;
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
-                ' / Views: ' + video_details.statistics.viewCount +
+                ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
                }
    
