@@ -52,8 +52,8 @@ var val = val1 + '-' + val2;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
                      } 
-                 return viewCount;
                   );
+              return viewCount;
         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
