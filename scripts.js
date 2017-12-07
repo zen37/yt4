@@ -5,13 +5,13 @@ var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
 
 var video_details = {
-      
+   count: 0;   
    get viewCount() {
-          return this.viewCount;  
+          return this.count;  
       },
       
    set viewCount(value) {
-            this.viewCount = value;
+            this.count = value;
       }
 };
   
