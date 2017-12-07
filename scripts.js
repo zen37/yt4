@@ -1,4 +1,3 @@
-<script>
  alert('i am here in scripts.js');
  var maxRes = 20; 
    
@@ -77,5 +76,3 @@ var val = val1 + '-' + val2;
       var st = 'https://www.youtube.com/embed/'+thi.id+'?autoplay=1&showinfo=0';
       document.getElementById('player').src = st; 
   }
- 
-</script>
