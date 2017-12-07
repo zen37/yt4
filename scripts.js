@@ -1,4 +1,4 @@
-var maxRes = 8; 
+var maxRes = 20; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -46,8 +46,9 @@ var val = val1 + '-' + val2;
                     {
                       var video_details = data.items[0];
                       var duration = video_details.contentDetails.duration; 
-                      console.log('duration: ' + duration);
+
                       var viewCount = video_details.statistics.viewCount;
+                      return viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
                      } 
@@ -58,7 +59,7 @@ var val = val1 + '-' + val2;
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
-                ' / Views: ' + 'viewCount' +
+                ' / Views: ' + viewCount +
                 '</td></tr>';
                }
    
