@@ -62,7 +62,7 @@ var video_details = {
                         video_details.viewCount = video_details.statistics.viewCount;
             
                     //  return viewCount;
-                      $( "p" ).text(viewCount);
+                      $( "p" ).text(video_details.viewCount);
                       console.log(video_details);
                      });
   
