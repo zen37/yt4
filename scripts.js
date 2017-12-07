@@ -45,7 +45,8 @@ var val = val1 + '-' + val2;
                     function(data) 
                     {
                       var video_details = data.items[0];
-                      //  var duration = data.contentDetails.duration; 
+                      var duration = video_details.contentDetails.duration; 
+                      console.log('duration: ' + duration);
                       var viewCount = video_details.statistics.viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
