@@ -40,12 +40,10 @@ var video_details = {
       
           var channelTitle  =  response.items[i].snippet.channelTitle;
         
-          var videodatetime = response.items[i].snippet.publishedAt; // date time published
+          var videodatetime = response.items[i].snippet.publishedAt; 
           var videodate = videodatetime.substr(0, 10);
         
-          var videolang = response.items[i].snippet.defaultAudioLanguage;
-        //  console.log('Language: ' + videolang + 'channelTitle: ' + channelTitle);
-     
+          var videolang = response.items[i].snippet.defaultAudioLanguage;     
                       
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
@@ -59,10 +57,9 @@ var video_details = {
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
-                        video_details.viewCount = video_details.statistics.viewCount;
-            
-                    //  return viewCount;
-                      $( "p" ).text(video_details.viewCount);
+                       video_details.viewCount = video_details.statistics.viewCount;
+
+                      console.log('ViewCount: ' + video_details.viewCount);
                       console.log(video_details);
                      });
   
