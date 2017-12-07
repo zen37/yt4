@@ -35,7 +35,7 @@ var val = val1 + '-' + val2;
           var videolang = response.items[i].snippet.defaultAudioLanguage;
         //  console.log('Language: ' + videolang + 'channelTitle: ' + channelTitle);
          
-            var video_details;
+         var video_details;
                       
          $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
@@ -51,14 +51,9 @@ var val = val1 + '-' + val2;
 
                        var viewCount = video_details.statistics.viewCount;
                     //  return viewCount;
-                      $( "p" ).text(viewCount );
+                      $( "p" ).text(viewCount);
                       console.log(video_details);
-                     
-                     return video_details;
-            
-                     } 
-  
-                  );
+                     });
   
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
