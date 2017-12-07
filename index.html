@@ -7,7 +7,7 @@
     
       <style>
   p {
-    color: blue;
+    color: green;
   }
   </style>
   </head>
@@ -83,13 +83,13 @@ var val = val1 + '-' + val2;
 
                     function(data) 
                     {
-                       var video_details = data.items[0];
+                      var video_details = data.items[0];
                       //  var duration = data.contentDetails.duration; 
                       var viewCount = video_details.statistics.viewCount;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
-
-   
+                     } 
+                );
         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
@@ -100,10 +100,8 @@ var val = val1 + '-' + val2;
                 '</td></tr>';
           }
      
-      }
-               
-                                             } // was after  console.log(video_details);
-                );
+      }               
+
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
         
 
