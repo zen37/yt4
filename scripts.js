@@ -1,4 +1,4 @@
-var maxRes = 20; 
+var maxRes = 3; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -52,6 +52,7 @@ var val = val1 + '-' + val2;
                       $( "p" ).text(viewCount );
                       console.log(video_details);
                      } 
+                 return viewCount;
                   );
         
           if(typeof vid != 'undefined'){    
