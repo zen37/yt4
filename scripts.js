@@ -69,6 +69,8 @@ var val = val1 + '-' + val2;
                                  console.log('i in function(data) = ' + i);
                      });
   
+   video_details.viewCount = 299;         
+         
           if(typeof vid != 'undefined'){    
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
