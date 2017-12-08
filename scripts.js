@@ -62,7 +62,7 @@ var val = val1 + '-' + val2;
                     //  var duration = video_details.contentDetails.duration; 
 
                        video_details.viewCount = video_details.statistics.viewCount;
-
+                     debugger;
                       console.log('ViewCount: ' + video_details.viewCount);
                       console.log(video_details);
                      });
