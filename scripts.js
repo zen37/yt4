@@ -37,10 +37,10 @@ var val = val1 + '-' + val2;
             },
 
          set viewCount(value) {
-                  this.count = value;
                   console.log('value: '+ value);
+                  this.count = value;
             }
-      };
+          };
         
           var vid = response.items[i].id.videoId; 
       
@@ -64,9 +64,9 @@ var val = val1 + '-' + val2;
                     //  var duration = video_details.contentDetails.duration; 
 
                        video_details.viewCount = video_details.statistics.viewCount;
-                     debugger;
+                       debugger;
                       console.log('ViewCount: ' + video_details.viewCount);
-                      console.log(video_details);
+                       console.log('video_details for: ' + vid);
                      });
   
           if(typeof vid != 'undefined'){    
@@ -77,9 +77,9 @@ var val = val1 + '-' + val2;
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
                }
-   
+         console.log('i = ' + i);
+         
       }               
-
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
   }
   
