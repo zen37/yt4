@@ -76,11 +76,11 @@ var val = val1 + '-' + val2;
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
-               }
-
-             
+         
                 });
          
+           }
+
       }               
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
   }
