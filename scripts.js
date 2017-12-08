@@ -49,7 +49,29 @@ var val = val1 + '-' + val2;
           var videolang = response.items[i].snippet.defaultAudioLanguage;     
       
           if(typeof vid != 'undefined'){ 
-                           
+             
+             
+             function foo(callback) { 
+    $.get("https://www.googleapis.com/youtube/v3/videos",
+                   {
+                        part: 'contentDetails, statistics',
+                        id:   vid, 
+                        key:  val
+                    },
+          callback); 
+}
+
+foo(function(data){
+ {
+                      video_details = data.items[0];
+                    //  var duration = video_details.contentDetails.duration; 
+
+                       video_details.viewCount = video_details.statistics.viewCount;
+                       debugger;
+                               console.log('vid in function(data) = ' + vid);
+                                 console.log('i in function(data) = ' + i);
+                     });
+  /*                         
               $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
                         part: 'contentDetails, statistics',
@@ -67,7 +89,7 @@ var val = val1 + '-' + val2;
                                console.log('vid in function(data) = ' + vid);
                                  console.log('i in function(data) = ' + i);
                      });
-        
+     */   
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
