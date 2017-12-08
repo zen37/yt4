@@ -28,14 +28,11 @@ var val = val1 + '-' + val2;
       for (var i=0; i<response.items.length;i++){
          
           var video_details = {
-          
-          count: 0,  
-         
+          count: 0,           
           get viewCount() {
                 console.log('count has been requested: '+ this.count);
                 return this.count;  
             },
-
          set viewCount(value) {
                   console.log('value has been passed: '+ value);
                   this.count = value;
@@ -50,8 +47,10 @@ var val = val1 + '-' + val2;
           var videodate = videodatetime.substr(0, 10);
         
           var videolang = response.items[i].snippet.defaultAudioLanguage;     
-                      
-         $.get("https://www.googleapis.com/youtube/v3/videos",
+      
+          if(typeof vid != 'undefined'){ 
+                           
+              $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
                         part: 'contentDetails, statistics',
                         id:   vid, 
@@ -68,10 +67,7 @@ var val = val1 + '-' + val2;
                                console.log('vid in function(data) = ' + vid);
                                  console.log('i in function(data) = ' + i);
                      });
-  
-   video_details.viewCount = 299;         
-         
-          if(typeof vid != 'undefined'){    
+        
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
