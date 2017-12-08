@@ -24,17 +24,7 @@ var val = val1 + '-' + val2;
     
   function myPlan(response){
      
-        var video_details = {
-          count: 0,           
-          get viewCount() {
-                console.log('count has been requested: '+ this.count);
-                return this.count;  
-            },
-         set viewCount(value) {
-                  console.log('value has been passed: '+ value);
-                  this.count = value;
-            }
-          };
+
      
       var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
       for (var i=0; i<response.items.length;i++){
@@ -49,9 +39,7 @@ var val = val1 + '-' + val2;
           var videolang = response.items[i].snippet.defaultAudioLanguage;     
       
           if(typeof vid != 'undefined'){ 
-             
-
-                     
+                 
               $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
                         part: 'contentDetails, statistics',
@@ -61,6 +49,19 @@ var val = val1 + '-' + val2;
 
                     function(data) 
                     {
+                 
+                                   var video_details = {
+                                     count: 0,           
+                                     get viewCount() {
+                                           console.log('count has been requested: '+ this.count);
+                                           return this.count;  
+                                       },
+                                    set viewCount(value) {
+                                             console.log('value has been passed: '+ value);
+                                             this.count = value;
+                                       }
+                                     };
+                 
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
