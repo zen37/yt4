@@ -32,12 +32,12 @@ var val = val1 + '-' + val2;
           count: 0,  
          
           get viewCount() {
-                console.log('count: '+ this.count);
+                console.log('count has been requested: '+ this.count);
                 return this.count;  
             },
 
          set viewCount(value) {
-                  console.log('value: '+ value);
+                  console.log('value has been passed: '+ value);
                   this.count = value;
             }
           };
@@ -65,8 +65,8 @@ var val = val1 + '-' + val2;
 
                        video_details.viewCount = video_details.statistics.viewCount;
                        debugger;
-                      console.log('ViewCount: ' + video_details.viewCount);
-                       console.log('video_details for: ' + vid);
+                               console.log('vid in function(data) = ' + vid);
+                                 console.log('i in function(data) = ' + i);
                      });
   
           if(typeof vid != 'undefined'){    
@@ -77,6 +77,7 @@ var val = val1 + '-' + val2;
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
                }
+         console.log('vid = ' + vid);
          console.log('i = ' + i);
          
       }               
