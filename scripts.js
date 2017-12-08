@@ -1,4 +1,4 @@
-var maxRes = 8; 
+var maxRes = 4; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -24,7 +24,10 @@ var val = val1 + '-' + val2;
     
   function myPlan(response){
      
-       var video_details = {
+      var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
+      for (var i=0; i<response.items.length;i++){
+         
+          var video_details = {
           
           count: 0,  
          
@@ -38,9 +41,6 @@ var val = val1 + '-' + val2;
                   console.log('value: '+ value);
             }
       };
-     
-      var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
-      for (var i=0; i<response.items.length;i++){
         
           var vid = response.items[i].id.videoId; 
       
