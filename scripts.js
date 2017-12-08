@@ -1,4 +1,4 @@
-var maxRes = 4; 
+var maxRes = 2; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -45,6 +45,7 @@ var val = val1 + '-' + val2;
                         part: 'contentDetails, statistics',
                         id:   vid, 
                         key:  val
+                        console.log('vid in url part = ' + vid);
                     },
 
                     function(data) 
@@ -67,7 +68,7 @@ var val = val1 + '-' + val2;
 
                        video_details.viewCount = video_details.statistics.viewCount;
                        debugger;
-                       console.log('vid = ' + vid);
+                       console.log('vid in data part= ' + vid);
                        console.log('viewCount = ' +  video_details.viewCount);
 
      
