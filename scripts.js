@@ -5,6 +5,7 @@ var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
   
 var x = new Array(3);
+var j = 0;
 
  function searchQ(){
  
@@ -75,8 +76,7 @@ var x = new Array(3);
                        debugger;
                        console.log('vid2 in data part= ' + vid2);
                        console.log('viewCount = ' +  video_details.viewCount);
-
-                       var j = 0;
+                     
                        var channel;
                  
               stList += '<tr><td style="width:30%">'+
