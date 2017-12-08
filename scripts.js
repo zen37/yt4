@@ -62,15 +62,15 @@ var val = val1 + '-' + val2;
 }
 
 foo(function(data){
- {
-                      video_details = data.items[0];
+
+                     video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
                        video_details.viewCount = video_details.statistics.viewCount;
                        debugger;
                                console.log('vid in function(data) = ' + vid);
                                  console.log('i in function(data) = ' + i);
-                     });
+              });
   /*                         
               $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
