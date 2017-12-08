@@ -1,4 +1,4 @@
-var maxRes = 3; 
+var maxRes = 1; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -24,8 +24,6 @@ var val = val1 + '-' + val2;
     
   function myPlan(response){
      
-
-     
       var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
       for (var i=0; i<response.items.length;i++){
         
@@ -49,7 +47,7 @@ var val = val1 + '-' + val2;
 
                     function(data) 
                     {
-                    debugger;         
+                        
                  var video_details = {
                              count: 0,           
                                 get viewCount() {
@@ -77,10 +75,11 @@ var val = val1 + '-' + val2;
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
+                 document.getElementById('list1').innerHTML = stList + '</tbody></table>';
                    });
               }
       }               
-      document.getElementById('list1').innerHTML = stList + '</tbody></table>';
+   //   document.getElementById('list1').innerHTML = stList + '</tbody></table>';
   }
   
   function playVid(thi){
