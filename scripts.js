@@ -1,12 +1,10 @@
-var maxRes = 2; 
+var maxRes = 3; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
-
   
 var x = new Array(3);
-var j = 0;
 
  function searchQ(){
  
@@ -78,8 +76,9 @@ var j = 0;
                        console.log('vid2 in data part= ' + vid2);
                        console.log('viewCount = ' +  video_details.viewCount);
 
-                       
-                        var channel;
+                       var j = 0;
+                       var channel;
+                 
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid2 +'</a></td>'+
@@ -87,7 +86,7 @@ var j = 0;
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
            
-                 j = j++;
+                 j = j + 1;
                  console.log('j = ' + j);
                  document.getElementById('list1').innerHTML = stList + '</tbody></table>';
                    });
