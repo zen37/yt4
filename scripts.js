@@ -72,17 +72,22 @@ var x = new Array(3);
                     //  var duration = video_details.contentDetails.duration; 
 
                        video_details.viewCount = video_details.statistics.viewCount;
+                       var vid2 = video_details.id;
                        debugger;
-                       console.log('vid in data part= ' + vid);
+                       console.log('vid2 in data part= ' + vid2);
                        console.log('viewCount = ' +  video_details.viewCount);
 
-     
+                        var j = 0;
+                        var channel;
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
+           
+                 j = j++;
+                 console.log('j = ' + j);
                  document.getElementById('list1').innerHTML = stList + '</tbody></table>';
                    });
               }
