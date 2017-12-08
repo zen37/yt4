@@ -60,7 +60,7 @@ var val = val1 + '-' + val2;
                     },
           callback); 
 }
-setTimeout
+
 foo(function(data){
 
                      video_details = data.items[0];
