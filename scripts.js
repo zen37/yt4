@@ -50,29 +50,8 @@ var val = val1 + '-' + val2;
       
           if(typeof vid != 'undefined'){ 
              
-             
-             function foo(callback) { 
-    $.get("https://www.googleapis.com/youtube/v3/videos",
-                   {
-                        part: 'contentDetails, statistics',
-                        id:   vid, 
-                        key:  val
-                    },
-          callback); 
-}
 
-foo(function(data){
-
-                     video_details = data.items[0];
-                    //  var duration = video_details.contentDetails.duration; 
-
-                       video_details.viewCount = video_details.statistics.viewCount;
-                       console.log('video_details.viewCount ' + video_details.viewCount);
-   video_details.viewCount = 111;
-                               console.log('vid in function(data) = ' + vid);
-                                 console.log('i in function(data) = ' + i);
-              });
-  /*                         
+                     
               $.get("https://www.googleapis.com/youtube/v3/videos",
                    {
                         part: 'contentDetails, statistics',
@@ -88,9 +67,9 @@ foo(function(data){
                        video_details.viewCount = video_details.statistics.viewCount;
                        debugger;
                                console.log('vid in function(data) = ' + vid);
-                                 console.log('i in function(data) = ' + i);
-                     });
-     */   
+                               console.log('i in function(data) = ' + i);
+
+     
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid +'</a></td>'+
@@ -98,8 +77,9 @@ foo(function(data){
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
                }
-         console.log('vid = ' + vid);
-         console.log('i = ' + i);
+
+             
+                });
          
       }               
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
