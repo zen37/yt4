@@ -1,10 +1,12 @@
-var maxRes = 2; 
+var maxRes = 3; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
 
   
+var x = new Array(3);
+
  function searchQ(){
  
       query = document.getElementById('queryText').value;
@@ -26,15 +28,21 @@ var val = val1 + '-' + val2;
      
       var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
       for (var i=0; i<response.items.length;i++){
-        
+         
+          x[i] = new Array(3);
+
           var vid = response.items[i].id.videoId; 
       
           var channelTitle  =  response.items[i].snippet.channelTitle;
         
           var videodatetime = response.items[i].snippet.publishedAt; 
           var videodate = videodatetime.substr(0, 10);
-        
-          var videolang = response.items[i].snippet.defaultAudioLanguage;     
+          
+          var videolang = response.items[i].snippet.defaultAudioLanguage;  
+                 
+            x[i][0]= vid ;
+            x[i][1]= channelTitle ;
+            x[i][2]= videodate;
       
           if(typeof vid != 'undefined'){ 
                  
