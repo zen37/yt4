@@ -4,18 +4,6 @@ var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
 
-var video_details = {
-   count: 0,  
-   get viewCount() {
-          console.log('count: '+ this.count);
-          return this.count;  
-      },
-      
-   set viewCount(value) {
-            this.count = value;
-            console.log('value: '+ value);
-      }
-};
   
  function searchQ(){
  
@@ -35,6 +23,20 @@ var video_details = {
   }
     
   function myPlan(response){
+     
+       var video_details = {
+         count: 0,  
+         get viewCount() {
+                console.log('count: '+ this.count);
+                return this.count;  
+            },
+
+         set viewCount(value) {
+                  this.count = value;
+                  console.log('value: '+ value);
+            }
+      };
+     
       var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
       for (var i=0; i<response.items.length;i++){
         
