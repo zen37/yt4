@@ -25,8 +25,10 @@ var val = val1 + '-' + val2;
   function myPlan(response){
      
        var video_details = {
-         var count: 0,  
-         get viewCount() {
+          
+          count: 0,  
+         
+          get viewCount() {
                 console.log('count: '+ this.count);
                 return this.count;  
             },
