@@ -45,12 +45,12 @@ var val = val1 + '-' + val2;
                         part: 'contentDetails, statistics',
                         id:   vid, 
                         key:  val
-                        console.log('vid in url part = ' + vid);
                     },
 
                     function(data) 
                     {
-                             var video_details = {
+                    debugger;         
+                 var video_details = {
                              count: 0,           
                                 get viewCount() {
                                            console.log('count has been requested: '+ this.count);
