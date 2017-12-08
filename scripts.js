@@ -50,10 +50,9 @@ var val = val1 + '-' + val2;
 
                     function(data) 
                     {
-                 
-                                   var video_details = {
-                                     count: 0,           
-                                     get viewCount() {
+                             var video_details = {
+                             count: 0,           
+                                get viewCount() {
                                            console.log('count has been requested: '+ this.count);
                                            return this.count;  
                                        },
@@ -61,7 +60,7 @@ var val = val1 + '-' + val2;
                                              console.log('value has been passed: '+ value);
                                              this.count = value;
                                        }
-                                     };
+                                  };
                  
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
