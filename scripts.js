@@ -68,6 +68,7 @@ foo(function(data){
 
                        video_details.viewCount = video_details.statistics.viewCount;
                        console.log('video_details.viewCount ' + video_details.viewCount);
+   video_details.viewCount = 111;
                                console.log('vid in function(data) = ' + vid);
                                  console.log('i in function(data) = ' + i);
               });
