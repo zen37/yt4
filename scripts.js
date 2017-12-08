@@ -24,10 +24,7 @@ var val = val1 + '-' + val2;
     
   function myPlan(response){
      
-      var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
-      for (var i=0; i<response.items.length;i++){
-         
-          var video_details = {
+        var video_details = {
           count: 0,           
           get viewCount() {
                 console.log('count has been requested: '+ this.count);
@@ -38,6 +35,9 @@ var val = val1 + '-' + val2;
                   this.count = value;
             }
           };
+     
+      var stList = '<table id="res1" border="1" cellspacing="0" width="100%"><tbody>'; 
+      for (var i=0; i<response.items.length;i++){
         
           var vid = response.items[i].id.videoId; 
       
@@ -60,14 +60,14 @@ var val = val1 + '-' + val2;
                     },
           callback); 
 }
-
+setTimeout
 foo(function(data){
 
                      video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
                        video_details.viewCount = video_details.statistics.viewCount;
-                       debugger;
+                       console.log('video_details.viewCount ' + video_details.viewCount);
                                console.log('vid in function(data) = ' + vid);
                                  console.log('i in function(data) = ' + i);
               });
