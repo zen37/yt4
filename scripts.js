@@ -1,4 +1,4 @@
-var maxRes = 3; 
+var maxRes = 4; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -67,8 +67,8 @@ var val = val1 + '-' + val2;
 
                        video_details.viewCount = video_details.statistics.viewCount;
                        debugger;
-                               console.log('vid in function(data) = ' + vid);
-                               console.log('i in function(data) = ' + i);
+                       console.log('vid = ' + vid);
+                       console.log('viewCount = ' +  video_details.viewCount);
 
      
               stList += '<tr><td style="width:30%">'+
