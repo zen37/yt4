@@ -1,4 +1,4 @@
-var maxRes = 4; 
+var maxRes = 3; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -76,11 +76,8 @@ var val = val1 + '-' + val2;
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
                 ' / Views: ' + video_details.viewCount +
                 '</td></tr>';
-         
-                });
-         
-           }
-
+                   });
+              }
       }               
       document.getElementById('list1').innerHTML = stList + '</tbody></table>';
   }
