@@ -55,7 +55,7 @@ var j = 0;
 
                     function(data) 
                     {
-                        
+                        /*
                  var video = {
                                 count: 0,           
                                 get viewCount() {
@@ -67,7 +67,7 @@ var j = 0;
                                              this.count = value;
                                        }
                                   };
-                 
+                        */
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
@@ -89,12 +89,12 @@ var j = 0;
                 ' return false">'+ vid2 +'</a></td>'+
                 '<td>'+ 
                 'Published: ' + videodate + '<br>' + 
-                'Duration: ' + moment.duration(video_details.contentDetails.duration).format('hh:mm:ss') + '<br>' + 
-                'Channel: ' + channelTitle + '<br>' + 
-                'Language: ' + videolang + '<br>' + 
-                'Views: ' + video.viewCount + '<br>' + 
-                'Likes: ' + video_details.statistics.likeCount + '<br>' + 
-                'Dislikes: ' + video_details.statistics.dislikeCount +
+                'Duration: '  + moment.duration(video_details.contentDetails.duration).format('hh:mm:ss') + '<br>' + 
+                'Channel: '   + channelTitle + '<br>' + 
+                'Language: '  + videolang + '<br>' + 
+                'Views: '     + video_details.statistics.viewCount; + '<br>' + 
+                'Likes: '     + video_details.statistics.likeCount + '<br>' + 
+                'Dislikes: '  + video_details.statistics.dislikeCount +
                 '</td></tr>';
            
                  j = j + 1;
