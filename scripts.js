@@ -10,7 +10,7 @@ var x = new Array(3);
  
       query = document.getElementById('queryText').value;
       email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
-      '&order=viewCount&date&q='+ query + '&key=' + val +
+      '&order=date&q='+ query + '&key=' + val +
       '&callback=myPlan';
       var oldsearchS = document.getElementById('searchS');
       if(oldsearchS){
