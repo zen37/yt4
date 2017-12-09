@@ -5,7 +5,7 @@ var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
 
 var x = new Array(3);
-var j = 0;
+// var j = 0;
 
  function searchQ(){
  
@@ -96,13 +96,13 @@ var j = 0;
                 'Duration: '  + moment.duration(video_details.contentDetails.duration).format('hh:mm:ss') + '<br>' + 
                 'Channel: '   + channelTitle + '<br>' + 
                 'Language: '  + videolang + '<br>' + 
-                'Views: '     + video_details.statistics.viewCount; + '<br>' + 
+                'Views: '     + video_details.statistics.viewCount + '<br>' + 
                 'Likes: '     + video_details.statistics.likeCount + '<br>' + 
                 'Dislikes: '  + video_details.statistics.dislikeCount +
                 '</td></tr>';
            
-                 j = j + 1;
-                 console.log('j = ' + j);
+          //       j = j + 1;
+         //        console.log('j = ' + j);
                  document.getElementById('list1').innerHTML = stList + '</tbody></table>';
                    });
               }
