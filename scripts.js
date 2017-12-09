@@ -84,7 +84,7 @@ var j = 0;
                 ' return false">'+ vid2 +'</a></td>'+
                 '<td>'+ 
                 'Published: ' + videodate + '<br>' + 
-                'Duration: ' + video_details.contentDetails.duration + '<br>' + 
+                'Duration: ' + moment.duration(video_details.contentDetails.duration).format('hh:mm:ss') + '<br>' + 
                 'Channel: ' + channelTitle + '<br>' + 
                 'Language: ' + videolang + '<br>' + 
                 'Views: ' + video.viewCount + '<br>' + 
