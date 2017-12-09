@@ -1,11 +1,10 @@
-var maxRes = 4; 
+var maxRes = 11; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
 
 var x = new Array(3);
-// var j = 0;
 
  function searchQ(){
  
@@ -55,38 +54,17 @@ var x = new Array(3);
 
                     function(data) 
                     {
-                        /*
-                 var video = {
-                                count: 0,           
-                                get viewCount() {
-                                      //     console.log('count has been requested: '+ this.count);
-                                           return this.count;  
-                                       },
-                                    set viewCount(value) {
-                                        //     console.log('value has been passed: '+ value);
-                                             this.count = value;
-                                       }
-                                  };
-                        */
-                      video_details = data.items[0];
-                    //  var duration = video_details.contentDetails.duration; 
 
-                 //      video.viewCount = video_details.statistics.viewCount;
+                       video_details = data.items[0];
+
                        var vid2 = video_details.id;
-                     //  debugger;
-                     //  console.log('vid2 in data part= ' + vid2);
-                     //   console.log('viewCount = ' +  video.viewCount);
                      
                        for (var k=0; k<x.length;k++){
-                          console.log('vid = ' + x[k][0]);
                           if (x[k][0] == vid2) {
                              channelTitle = x[k][1];
                              videodate    = x[k][2];
                           }
-                          console.log('channelTitle = ' + x[k][1]);
-                          console.log('videodate= ' + x[k][2]);
                        }
-
                  
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid2 + '" onclick="playVid(this);'+
@@ -100,14 +78,12 @@ var x = new Array(3);
                 'Likes: '     + video_details.statistics.likeCount + '<br>' + 
                 'Dislikes: '  + video_details.statistics.dislikeCount +
                 '</td></tr>';
-           
-          //       j = j + 1;
-         //        console.log('j = ' + j);
+
                  document.getElementById('list1').innerHTML = stList + '</tbody></table>';
                    });
               }
       }               
-   //   document.getElementById('list1').innerHTML = stList + '</tbody></table>';
+   
   }
   
   function playVid(thi){
