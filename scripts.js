@@ -4,7 +4,7 @@ var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
   
-var x = new Array(2);
+var x;
 var j = 0;
 
  function searchQ(){
@@ -59,11 +59,11 @@ var j = 0;
                  var video = {
                                 count: 0,           
                                 get viewCount() {
-                                           console.log('count has been requested: '+ this.count);
+                                      //     console.log('count has been requested: '+ this.count);
                                            return this.count;  
                                        },
                                     set viewCount(value) {
-                                             console.log('value has been passed: '+ value);
+                                        //     console.log('value has been passed: '+ value);
                                              this.count = value;
                                        }
                                   };
@@ -74,10 +74,15 @@ var j = 0;
                        video.viewCount = video_details.statistics.viewCount;
                        var vid2 = video_details.id;
                        debugger;
-                       console.log('vid2 in data part= ' + vid2);
-                       console.log('viewCount = ' +  video.viewCount);
+                     //  console.log('vid2 in data part= ' + vid2);
+                     //   console.log('viewCount = ' +  video.viewCount);
                      
-                       var channel;
+                       for (var k=0; k<x.length;k++){
+                          console.log('vid = ' + x[k][0]);
+                          console.log('channelTitle = ' + x[k][1]);
+                          console.log('videodate= ' + x[k][2]);
+                       }
+
                  
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid2 + '" onclick="playVid(this);'+
