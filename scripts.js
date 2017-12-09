@@ -79,6 +79,10 @@ var j = 0;
                      
                        for (var k=0; k<x.length;k++){
                           console.log('vid = ' + x[k][0]);
+                          if (x[k][0] == vid2) {
+                             channelTitle = x[k][1];
+                             videodate    = x[k][2];
+                          }
                           console.log('channelTitle = ' + x[k][1]);
                           console.log('videodate= ' + x[k][2]);
                        }
