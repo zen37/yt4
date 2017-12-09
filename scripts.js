@@ -3,8 +3,8 @@ var maxRes = 4;
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
-  
-var x;
+
+var x = new Array(3);
 var j = 0;
 
  function searchQ(){
