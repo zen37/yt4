@@ -1,4 +1,4 @@
-var maxRes = 2; 
+var maxRes = 4; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -82,10 +82,12 @@ var j = 0;
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid2 +'</a></td>'+
-                '<td>'+ 'Published: ' + videodate + '<br>' + '/ Channel: ' + channelTitle + '<br>' + ' / Language: ' + videolang +
-                ' / Views: ' + video.viewCount +
-                ' / Likes: ' + video_details.statistics.likeCount +
-                ' / Dislikes: ' + video_details.statistics.dislikeCount +
+                '<td>'+ 'Published: ' + videodate + '<br>' + 
+                'Channel: ' + channelTitle + '<br>' + 
+                'Language: ' + videolang + '<br>' + 
+                'Views: ' + video.viewCount + '<br>' + 
+                'Likes: ' + video_details.statistics.likeCount + '<br>' + 
+                'Dislikes: ' + video_details.statistics.dislikeCount +
                 '</td></tr>';
            
                  j = j + 1;
