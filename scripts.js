@@ -1,4 +1,4 @@
-var maxRes = 2; 
+var maxRes = 3; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -84,6 +84,7 @@ var j = 0;
                 ' return false">'+ vid2 +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
                 ' / Views: ' + video.viewCount +
+                ' / Likes: ' + video_details.statistics.likes +
                 '</td></tr>';
            
                  j = j + 1;
