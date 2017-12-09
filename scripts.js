@@ -80,7 +80,7 @@ var j = 0;
                        var channel;
                  
               stList += '<tr><td style="width:30%">'+
-                '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
+                '<a class="show" href="#" id="'+ vid2 + '" onclick="playVid(this);'+
                 ' return false">'+ vid2 +'</a></td>'+
                 '<td>'+ 
                 'Published: ' + videodate + '<br>' + 
