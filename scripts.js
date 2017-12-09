@@ -71,9 +71,9 @@ var j = 0;
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
-                       video.viewCount = video_details.statistics.viewCount;
+                 //      video.viewCount = video_details.statistics.viewCount;
                        var vid2 = video_details.id;
-                       debugger;
+                     //  debugger;
                      //  console.log('vid2 in data part= ' + vid2);
                      //   console.log('viewCount = ' +  video.viewCount);
                      
