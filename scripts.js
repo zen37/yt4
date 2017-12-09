@@ -70,7 +70,7 @@ var x = new Array(3);
                 '<a class="show" href="#" id="'+ vid2 + '" onclick="playVid(this);'+
                 ' return false">'+ vid2 +'</a></td>'+
                 '<td>'+ 
-                'Published: ' + videodate + '<br>' + 
+                'Published: ' + moment(videodate).format('DD-MMM-YYYY') + '<br>' + 
                 'Duration: '  + moment.duration(video_details.contentDetails.duration).format('hh:mm:ss') + '<br>' + 
                 'Channel: '   + channelTitle + '<br>' + 
                 'Language: '  + videolang + '<br>' + 
