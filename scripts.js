@@ -1,4 +1,4 @@
-var maxRes = 3; 
+var maxRes = 2; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -56,8 +56,8 @@ var j = 0;
                     function(data) 
                     {
                         
-                 var video_details = {
-                             count: 0,           
+                 var video = {
+                                count: 0,           
                                 get viewCount() {
                                            console.log('count has been requested: '+ this.count);
                                            return this.count;  
@@ -71,11 +71,11 @@ var j = 0;
                       video_details = data.items[0];
                     //  var duration = video_details.contentDetails.duration; 
 
-                       video_details.viewCount = video_details.statistics.viewCount;
+                       video.viewCount = video_details.statistics.viewCount;
                        var vid2 = video_details.id;
                        debugger;
                        console.log('vid2 in data part= ' + vid2);
-                       console.log('viewCount = ' +  video_details.viewCount);
+                       console.log('viewCount = ' +  video.viewCount);
                      
                        var channel;
                  
@@ -83,7 +83,7 @@ var j = 0;
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid2 +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
-                ' / Views: ' + video_details.viewCount +
+                ' / Views: ' + video.viewCount +
                 '</td></tr>';
            
                  j = j + 1;
