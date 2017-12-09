@@ -1,4 +1,4 @@
-var maxRes = 3; 
+var maxRes = 2; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
