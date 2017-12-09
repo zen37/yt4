@@ -4,7 +4,7 @@ var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
   
-var x = new Array(3);
+var x = new Array(2);
 var j = 0;
 
  function searchQ(){
@@ -82,7 +82,7 @@ var j = 0;
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid2 +'</a></td>'+
-                '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
+                '<td>'+ 'Published: ' + videodate + '<br>' + / Channel: ' + channelTitle + '<br>' + ' / Language: ' + videolang +
                 ' / Views: ' + video.viewCount +
                 ' / Likes: ' + video_details.statistics.likeCount +
                 ' / Dislikes: ' + video_details.statistics.dislikeCount +
