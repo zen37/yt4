@@ -82,7 +82,9 @@ var j = 0;
               stList += '<tr><td style="width:30%">'+
                 '<a class="show" href="#" id="'+ vid + '" onclick="playVid(this);'+
                 ' return false">'+ vid2 +'</a></td>'+
-                '<td>'+ 'Published: ' + videodate + '<br>' + 
+                '<td>'+ 
+                'Published: ' + videodate + '<br>' + 
+                'Duration: ' + video_details.contentDetails.duration + '<br>' + 
                 'Channel: ' + channelTitle + '<br>' + 
                 'Language: ' + videolang + '<br>' + 
                 'Views: ' + video.viewCount + '<br>' + 
