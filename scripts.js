@@ -84,7 +84,8 @@ var j = 0;
                 ' return false">'+ vid2 +'</a></td>'+
                 '<td>'+ 'Published: ' + videodate + ' / Channel: ' + channelTitle + ' / Language: ' + videolang +
                 ' / Views: ' + video.viewCount +
-                ' / Likes: ' + video_details.statistics.likes +
+                ' / Likes: ' + video_details.statistics.likeCount +
+                ' / Dislikes: ' + video_details.statistics.dislikeCount +
                 '</td></tr>';
            
                  j = j + 1;
