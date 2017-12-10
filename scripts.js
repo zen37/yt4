@@ -7,6 +7,9 @@ var val = val1 + '-' + val2;
 var x = new Array();
 
  function searchQ(){
+    
+      document.getElementById('player').clear;
+    
       maxRes = document.getElementById('maxResults').value; 
       query = document.getElementById('queryText').value;
       email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
