@@ -1,4 +1,4 @@
-//var maxRes = 11; 
+var maxRes = document.getElementById('maxResults').value; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -9,7 +9,7 @@ var x = new Array();
  function searchQ(){
  
       query = document.getElementById('queryText').value;
-      email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ document.getElementById('maxResults').values +
+      email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
       '&order=date&q='+ query + '&key=' + val +
       '&callback=myPlan';
       var oldsearchS = document.getElementById('searchS');
