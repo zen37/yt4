@@ -4,9 +4,7 @@ var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
 var val = val1 + '-' + val2;
 
-var x = new Array(3);
-
-maxr
+var x = new Array();
 
  function searchQ(){
  
