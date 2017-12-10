@@ -1,4 +1,4 @@
-var maxRes = document.getElementById('maxResults').value; 
+var maxRes; 
    
 var val1 = 'AIzaSyAFV5dB';
 var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
@@ -7,7 +7,7 @@ var val = val1 + '-' + val2;
 var x = new Array();
 
  function searchQ(){
- 
+      maxRes = document.getElementById('maxResults').value; 
       query = document.getElementById('queryText').value;
       email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
       '&order=date&q='+ query + '&key=' + val +
