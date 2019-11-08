@@ -1,8 +1,6 @@
 var maxRes; 
    
-var val1 = 'AIzaSyAFV5dB';
-var val2 = '0CKCkb7L3ddrZYVL9bxr4lB31s';
-var val = val1 + '-' + val2;
+var val = 'AIzaSyAFV5dB-0CKCkb7L3ddrZYVL9bxr4lB31s';
 
 var x = new Array();
 
