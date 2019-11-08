@@ -10,7 +10,7 @@ var x = new Array();
     
       maxRes = document.getElementById('maxResults').value; 
       query = document.getElementById('queryText').value;
-      email = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
+      url = 'https://www.googleapis.com/youtube/v3/search?part=snippet' +'&maxResults='+ maxRes +
       '&order=date&q='+ query + '&key=' + val +
       '&callback=myPlan';
       var oldsearchS = document.getElementById('searchS');
@@ -18,7 +18,7 @@ var x = new Array();
             oldsearchS.parentNode.removeChild(oldsearchS);
       }
       var s = document.createElement('script');
-      s.setAttribute('src', email);
+      s.setAttribute('src', url);
       s.setAttribute('id','searchS');
       s.setAttribute('type','text/javascript');
       document.getElementsByTagName('head')[0].appendChild(s);
